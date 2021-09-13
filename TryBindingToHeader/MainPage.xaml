@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:Local="clr-namespace:tryHeaderFoder"
+             x:Class="TryBindingToHeader.MainPage">
+
+
+
+    <ContentPage.BindingContext>
+        <Local:Matchteams/>
+    </ContentPage.BindingContext>
+
+
+    <!--<ContentPage.BindingContext>
+        <Local:Matchteams/>
+
+    </ContentPage.BindingContext>-->
+
+
+
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Text="Add" Clicked="ToolbarItem_Clicked_Add"></ToolbarItem>
+        <ToolbarItem Text="Match" Clicked="ToolbarItem_Clicked_Match"></ToolbarItem>
+
+
+
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+
+        <ListView Margin="5,5,5,5" Header="">
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Label Text="{Binding GeamsTeams }" FontSize="30" BackgroundColor="Red" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                    </Grid>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
+
+
+
+        </ListView>
+    </StackLayout>
+
+
+
+</ContentPage>
